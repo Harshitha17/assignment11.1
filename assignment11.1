@@ -1,0 +1,29 @@
+ Q1) what is the use of sqlite helper class in sqlite? 
+Ans:-
+
+   public abstract class SQLiteOpenHelper  extends Object ."SQLiteOpenHelper" is a helper class to manage database creation and version management.
+ Fistly, we will create a class, and then we will extend SQLiteOpenHelper inside the class that we created.
+ Inside this class we need to override "onCreate(SQLiteDatabase)" and "onUpgrade(SQLiteDatabase, int, int)" method.
+ This class takes care of opening the database if it exists, creating it if it does not, and upgrading it as necessary.
+
+Q.2) What is the use of OnUpgrade function in SQLiteOpenHelper class?
+
+
+Ans:-
+
+ "onUpgrade()" is called when there are some changes made in the database schema. "onUpgrade()" is basically for handling new db changes(could be new columns addition,table addition) for any new version of the app. The purpose of onUpgrade is to manage a new database structure.
+One of the most common use of "onUpgrade()" is to drop tables that are to be changed and recreate them, with variables defined in code for SQL statements.
+
+
+
+
+
+
+Q.3) How to show SQLite database table information in Android application what is the best way to do it?
+
+
+Ans:-
+we can use Table Layout with cursor to display table in best way. Showing database information will be better suited with table layout, since table layout is not an adapter view, so we can't use cursor adapter with it.Table Layout is a layout that arranges its children into rows and columns.
+ A Table Layout consists of a number of Table Row objects, each defining a row
+
+ Cursor is the Interface which represents a 2-dimensional table of any database. When you try to retrieve some data using SELECT statement, then the database will first create a CURSOR object and return its reference to you. In simple words, Cursor is a Interface which returns collection of your query data.
